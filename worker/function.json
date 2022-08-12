@@ -1,0 +1,29 @@
+﻿{
+    "bindings": [
+      {
+        "name": "QueueItem",
+        "type": "queueTrigger",
+        "direction": "in",
+        "queueName": "queue",
+        "connection": "AzureWebJobsStorage"
+      },
+        {
+          "name": "RequestItem",
+          "type": "table",
+          "tableName": "outTable",
+          "partitionKey": "requests",
+          "rowKey": "{queueTrigger}",
+          "connection": "AzureWebJobsStorage",
+          "direction": "in"
+        },
+        {
+          "name": "ApprovalItem",
+          "type": "table",
+          "tableName": "outTable",
+          "partitionKey": "approvals",
+          "rowKey": "{queueTrigger}",
+          "connection": "AzureWebJobsStorage",
+          "direction": "in"
+        }
+    ]
+}
