@@ -13,7 +13,6 @@ $storageAccountName = "elapprovaltest1"
 $location = "westeurope"
 # specify attribute name of the section that will store the approval message
 $attributeName = "elApproval" 
-$deployPath = "/Users/tto/Downloads/el-approval-prod.zip"
 
 # login to azure and optionally change subscription
 az login
